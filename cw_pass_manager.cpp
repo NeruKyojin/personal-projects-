@@ -173,7 +173,7 @@ public:
 int main() {
     PasswordManager passwordManager;
     string input;
-    srand(time(0)); // respoible for random intergers 
+    srand(time(0)); // responsible for random intergers 
     
     cout << "=== PASSWORD MANAGER ===\n";
     while (true) { // condtional to make sure MP is six characters
@@ -198,7 +198,7 @@ int main() {
         }
     }
     
-    if (!loggedIn) { // respoible for triggering a lock out affect if int attempts hits 3 attempts 
+    if (!loggedIn) { // responsible for triggering a lock out affect if int attempts hits 3 attempts 
         cout << "Too many failed attempts. Exiting.\n"; 
         return 1;
     }
@@ -217,7 +217,7 @@ int main() {
         cout << "Choice: ";
         cin >> choice;
         
-        string user, pass; // stcture for credenital input going username then password
+        string user, pass; // structure for credenital input going username then password
         
         switch(choice) {
             case 1:
