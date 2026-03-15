@@ -1,41 +1,32 @@
-console.log("===================================")
-console.log("        Rock paper scissors")
-console.log("===================================")
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps.css">
+</head>
 
-let roundsplayed = 0;
-let result;
-let hs = 0;
-let cs = 0;
-while (roundsplayed < 5) {
+<body>
 
-    const pc = prompt("Rock, Paper or Scissors: ").toLowerCase();
+<h1 class="name">Rock, Paper, Scissors</h1>
 
-    const choices = ["rock", "paper", "scissors"];
-    const compchoice = choices[Math.floor(Math.random() * 3)];
-    
-    
-    switch (`${pc}-${compchoice}`) {
-        case "rock-scissors":
-        case "paper-rock":
-        case "scissors-paper":
-            result = "win";
-            hs++;
-        break;
+<div class="front">
+    <button class="start">Start</button>
+</div>
 
-        case "rock-paper":
-        case "paper-scissors":
-        case "scissors-rock":
-            result = "lose";
-            cs++;
-        break;
+<div class="button-container hidden">
+    <button class="rock">🪨</button>
+    <button class="paper">📄</button>
+    <button class="scissors">✂️</button>
+</div>
 
-    default:
-        result = "draw";
-    }
+<div class="result"></div>
 
-    roundsplayed++;
+<div class="restart hidden">
+    <button class="Y">Y</button>
+    <button class="N">N</button>
+</div>
 
-    console.log("the computer chose", compchoice)
-    console.log("you", result)
-}
-console.log("Final Score -> H",hs," Computer:", cs);
+<script src="RPS.js"></script>
+
+</body>
+</html>
